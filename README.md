@@ -161,22 +161,5 @@ query = 'machine learning using python')
   **Note:** There seem to be some issues with current version of tqdm. If you do not get
   expected progress bar behaviour, try this patch:
 
-  ```
-  $ pip uninstall tqdm
-  $ pip install git+https://github.com/nikhilkumarsingh/tqdm
-  ```
-
-- In ctdl/ctdl.py, remove the `.` prefix from `.downloader` and `.utils` for
-  the following imports, so it changes from:
-  ```python
-  from .downloader import download_series, download_parallel
-  from .utils import FILE_EXTENSIONS, THREAT_EXTENSIONS
-  ```
-  to:
-  ```python
-  from downloader import download_series, download_parallel
-  from utils import FILE_EXTENSIONS, THREAT_EXTENSIONS
-  ```
-
 - Run the python file directly `python ctdl/ctdl.py ___` (instead of with `ctdl ___`)
 
